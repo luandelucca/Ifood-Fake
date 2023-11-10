@@ -1,0 +1,467 @@
+:root{
+    --background-color: #F7F7F7;
+    --background-secundary: #fff;
+    --primary: #EA1D2C;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: var(--background-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+header {
+    height: 8.5rem;
+    position: fixed;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    background: var(--background-color);
+    z-index: 1;
+}
+a{
+    text-decoration: none;
+    color: #CD00BB;
+}
+a:hover {
+    background: #CD00BB;
+    color: white;
+}
+a:hover::after{
+    content: ' <3';
+}
+.bg-sec {
+    background: var(--background-secundary);
+}
+#logo {
+    width: 5rem;
+    margin: 3rem 4.5rem;
+    display: inline;
+}
+#criar-conta {
+    color: var(--primary);
+    font-weight: 600;
+}
+.titulo-branco {
+    color: #fff;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    font-family: sans-serif;
+    font-size: 2.2rem;
+}
+.btn-card {
+    margin: 4rem 0 0 -13rem;
+    width: 9rem !important;
+    border-radius: 1rem !important;
+}
+#btn-mercado {
+    background-color: #9EB53E;
+}
+#btn-restaurante {
+    background-color: #C2121F;
+}
+li {
+    padding-right: 1.5rem;
+    cursor: pointer;
+}
+ul {
+    display: flex;
+    list-style: none;
+    margin: 2.8rem 0.4rem;
+    align-items: center;
+}
+#menu {
+    width: 100%;
+}
+.menu-direita {
+    float: right;
+    display: inline-flex;
+    margin-left: 30%;
+    align-items: center;
+}
+#menu-mobile {
+    display: none;
+}
+#banner-inicial {
+    background-position: center;
+    padding-top: 8rem;
+    text-align: center;
+}
+.input {
+    width: 75%;
+    padding: 0.8rem;
+    color: grey;
+    font-size: 1rem;
+    border: none;
+    max-width: 45rem;
+}
+.input:focus{
+    outline: none;
+}
+.titulo {
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+.subtitulo {
+    color: grey;
+}
+.btn {
+    border: none;
+    font-weight: 600;
+    height: 2.7rem;
+    width: 8.5rem;
+    border-radius: 0.3rem;
+    background: var(--primary);
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #C2121F 
+}
+#entrar {
+    width: 6.5rem;
+}
+.content-cards{
+    margin-top: 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+.card, .mini-card {
+    background-position: bottom right;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+.card {
+    background-repeat: no-repeat;
+    width: 25rem;
+    height: 13rem;
+    border-radius: 1rem;
+}
+.mini-card {
+    width: 11rem;
+    background: red;
+    height: 3rem;
+    border-radius: 0.3rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    transition: all .1s ease-in-out;
+
+}
+.mini-card:hover {
+    transform: scale(1.1);
+    position: static;
+    z-index: -1;
+}
+.mini-imagem {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    align-self: center;
+}
+#mini-geral {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4rem;
+}
+#restaurante-card {
+    background-image: url(../Images/restaurant.webp);
+    background-color: var(--primary);
+    margin: 2%;
+}
+#mercado-card {
+    background-image: url(../Images/market.webp);
+    background-color: #B6D048;
+}
+#bebidas-card {
+    background-color: #F6D553;
+}
+#bebida-imagem {
+    padding: 3.5rem;
+    padding-bottom: 2.5rem;
+    background: url(../Images/drinks.webp);
+}
+#farmacia-card {
+    background-color: #F9879C;
+}
+#farmacia-imagem {
+    padding: 1.5rem;
+    background: url(../Images/pharmacy.webp);
+}
+#express-card {
+    background-color: var(--primary);
+}
+#express-imagem {
+    padding: 1.7rem;
+    background: url(../Images/express.webp);
+}
+#pet-card {
+    background-color: #8C60C5;
+}
+#pet-imagem {
+    padding: 2.5rem;
+    margin-top: 2.6rem;
+    background: url(../Images/petshop.webp);
+}
+.linha-separadora {
+    height: 0.1rem;
+    background: #ededed;
+    margin: 3rem 2rem 3rem 2rem;
+}
+#mercado-card.animation-hover {
+    opacity: .5;
+    position: relative;
+}
+#restaurante-card.animation-hover {
+    opacity: .5;
+    position: relative;
+}
+.estabelecimentos-slider {
+    display: inline-flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.secao {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 3.5rem 2.5rem;
+}
+.titulo-secao {
+    color: #2F2F2F;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+.estabelecimento-top-card {
+    width: 16rem;
+    height: 9rem;
+    border: 0.1rem solid #d6d6d6;
+    border-radius: 0.3rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.estabelecimento-top-card:hover{
+    border-color: rgb(71, 71, 71);
+}
+.logo-estabelecimento {
+    height: 3.5rem;
+    width: 3.5rem;
+    background: red;
+    background-size: contain;
+    border-radius: 3rem;
+    margin-left: 1.4rem;
+}
+#logo-mcdonalds {
+    background-image: url(../Images/mc-donalds.jpg);
+}
+#logo-chinainbox {
+    background-image: url(../Images/china.webp);
+}
+#logo-habibs {
+    background-image: url(../Images/habibs.webp);
+}
+#logo-outback {
+    background-image: url(../Images/outback.webp);
+}
+#logo-outback {
+    background-image: url(../Images/outback.webp);
+}
+#logo-dia {
+    background-image: url(../Images/dia.webp);
+}
+#logo-big {
+    background-image: url(../Images/big.webp);
+}
+#logo-eataly {
+    background-image: url(../Images/eataly.webp);
+}
+#logo-extra {
+    background-image: url(../Images/extra.png);
+}
+.infos-estabelecimento {
+    margin: 1rem;
+}
+.nome-estabelecimento {
+    font-size: .9rem;
+}
+.categoria-estabelecimento {
+    font-size: .7rem;
+}
+.banners {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.banner {
+    width: 24rem;
+    height: 13rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin: 1rem;
+}
+#banner1 {
+    background-image: url(../Images/banner1.webp);
+}
+#banner2 {
+    background-image: url(../Images/banner2.webp);
+}
+#banner3 {
+    background-image: url(../Images/banner3.webp);
+}
+#banner-delivery {
+    cursor: auto;
+    background-image: url(../Images/delivery-man.svg);
+}
+.blob {
+    background-image: url(../Images/blob.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#banner-delivery, #banner-store {
+    width: 17rem;
+}
+#banner-store {
+    cursor: auto;
+    background-image: url(../Images/store.svg);
+}
+#banner-fome {
+    cursor: auto;
+    width: 60rem;
+    height: 20rem;
+    background-image: url(../Images/food-lover-banner.webp);
+}
+#fome-que {
+    margin: 0px 10rem 0 10rem;
+}
+#banner-beneficios{
+    width: 100%;
+    background-image: url(../Images/ifood-benefits-desktop.webp);
+}
+::selection{
+    background-color: var(--primary);
+    color: #fff;
+}
+@media (max-width: 950px) {
+    #menu-mobile {
+        text-align: -webkit-right;
+        width: 100%;
+        display: inline;
+        cursor: pointer;
+        margin-right: 4%;
+   }
+    #logo {
+        margin: 1.2rem 4.5rem;
+   }
+    #menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        font-size: 20px;
+        right: 0;
+        width: 100%;
+        height: 0;
+        background: var(--background-color);
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+   }
+    #menu.active {
+        height: calc(100vh - 50px);
+        visibility: visible;
+        overflow-y: auto;
+        width: 100% ;
+   }
+   body.remover-scroll{
+        overflow-y: hidden;
+   }
+    #menu li {
+        display: block;
+        padding: 1rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+        margin: 5%;
+   }
+    .linha {
+        width: 1.5rem;
+        height: 0.188rem;
+        border-radius: 2px;
+        transition: transform .2s ease-out;
+        -webkit-transition: transform .2s ease-out;
+        background: black;
+        margin-top: 0.2em;
+   }
+    #linha1.active {
+        transform: rotate(127deg);
+        margin-top: 0;
+   }
+    #linha2.active {
+        transform: rotate(232deg);
+        margin-top: 0;
+   }
+    #linha3.active{
+        visibility: hidden;
+   }
+    header {
+        height: 4.5rem;
+   }
+    .btn {
+        margin-top: 1rem;
+        width: 80%;
+   }
+    .input {
+        width: 75%;
+   }
+    .card {
+        width: 10rem;
+        background-position: center;
+        background-size: contain;
+   }
+    .titulo-branco {
+        margin: 1rem;
+        font-size: 1.2rem;
+   }
+    .btn-card {
+        width: 9rem !important;
+        margin: 6rem 0;
+   }
+    .menu-direita {
+        float: none;
+        display: block;
+        margin: 0;
+   }
+    .banner {
+        margin: 0.5rem;
+        height: 9rem;
+   }
+    .estabelecimentos-slider {
+        flex-wrap: wrap;
+   }
+    .banners {
+        flex-wrap: wrap;
+   }
+    .infos-comerciais {
+        text-align: center;
+        margin: 2rem;
+   }
+   #fome-que {
+       margin: 0;
+   }
+}

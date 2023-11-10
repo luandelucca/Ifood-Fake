@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./Style/global.css">
+      <script src="./Scripts/main.js"></script>
+      <link rel="icon" href="./Images/icone.png">
+      <title>Delivery de Comida e Mercado - IFood</title>
+   </head>
+   <body>
+      <header>
+         <div style="display: inline-flexbox">
+            <img id="logo" src="./Images/ifood-logo.png"></img>
+         </div>
+         <div id="menu-mobile" onclick="toggleMenu()">
+            <div id="linha1" class="linha"></div>
+            <div id="linha2" class="linha"></div>
+            <div id="linha3" class="linha"></div>
+         </div>
+         <ul id="menu">
+            <li>Entregador</li>
+            <li>Restaurante e Mercado</li>
+            <li>Carreiras</li>
+            <li>Ifood Card</li>
+            <div class="menu-direita">
+               <li id="criar-conta">criar conta</li>
+               <li><button class="btn" id="entrar">Entrar</button> </li>
+            </div>
+         </ul>
+      </header>
+      <div id="banner-inicial">
+         <div style="margin-bottom: 5%;">
+            <p class="titulo">Tudo pra facilitar seu dia a dia</p>
+            <p class="subtitulo">O que você precisa está aqui. Peça e receba onde estiver.</p>
+         </div>
+         <input type="text" class="input" placeholder="Endereço de entrega e número"> 
+         <button class="btn">Buscar</button>
+      </div>
+      <div class="content-cards">
+         <div class="card" id="restaurante-card" onmouseover="inCard('restaurante')" onmouseleave="outCard('restaurante')">
+            <h1 class="titulo-branco">Restaurante</h1>
+            <button class="btn-card btn" id="btn-restaurante">Ver opções</button>
+         </div>
+         <div class="card" id="mercado-card">
+            <h1 class="titulo-branco">Mercado</h1>
+            <button class="btn-card btn" id="btn-mercado">Buscar lojas</button>
+         </div>
+      </div>
+      <div class="bg-sec">
+         <div class="content-cards" id="mini-geral">
+            <div class="mini-card" id="bebidas-card">
+               <div id="bebida-imagem" class="mini-imagem">
+                  <p style="padding-top: 4rem; font-weight: 600;">Bebidas</p>
+               </div>
+            </div>
+            <div class="mini-card" id="farmacia-card">
+               <div id="farmacia-imagem" class="mini-imagem">
+                  <p style="padding-top: 4.8rem; font-weight: 600;">Farmácia</p>
+               </div>
+            </div>
+            <div class="mini-card" id="express-card">
+               <div id="express-imagem" class="mini-imagem">
+                  <p style="padding-top: 5.4rem; font-weight: 600;">Express</p>
+               </div>
+            </div>
+            <div class="mini-card" id="pet-card">
+               <div id="pet-imagem" class="mini-imagem">
+                  <p style="padding-top: 3.4rem; font-weight: 600;">Pet shop</p>
+               </div>
+            </div>
+         </div>
+         <div class="linha-separadora"> </div>
+         <div class="secao">
+            <h2 class="titulo-secao">Os melhores restaurantes</h2>
+            <div class="estabelecimentos-slider">
+               <div class="estabelecimento-top-card">
+                  <div class="logo-estabelecimento" id="logo-mcdonalds"></div>
+                  <div class="infos-estabelecimento">
+                     <p class="nome-estabelecimento">Mcdonald's</p>
+                     <p class="categoria-estabelecimento">Lanches</p>
+                  </div>
+               </div>
+               <div class="estabelecimento-top-card">
+                  <div class="logo-estabelecimento" id="logo-chinainbox"></div>
+                  <div class="infos-estabelecimento">
+                     <p class="nome-estabelecimento">China in Box</p>
+                     <p class="categoria-estabelecimento">Chinesa</p>
+                  </div>
+               </div>
+               <div class="estabelecimento-top-card">
+                  <div class="logo-estabelecimento" id="logo-habibs"></div>
+                  <div class="infos-estabelecimento">
+                     <p class="nome-estabelecimento">Habib's</p>
+                     <p class="categoria-estabelecimento">Lanches</p>
+                  </div>
+               </div>
+               <div class="estabelecimento-top-card">
+                  <div class="logo-estabelecimento" id="logo-outback"></div>
+                  <div class="infos-estabelecimento">
+                     <p class="nome-estabelecimento">Outback Steakhouse</p>
+                     <p class="categoria-estabelecimento">Lanches</p>
+                  </div>
+               </div>
+            </div>
+            <div class="banners" style="flex-wrap: wrap">
+               <div class="banner" id="banner1"></div>
+               <div class="banner" id="banner2"></div>
+               <div class="banner" id="banner3"></div>
+            </div>
+         </div>
+         <div class="linha-separadora"> </div>
+         <div class="secao">
+            <h2 class="titulo-secao">Os melhores mercados</h2>
+            <div class="estabelecimentos-slider">
+               <div class="estabelecimento-top-card">
+                  <div class="logo-estabelecimento" id="logo-dia"></div>
+                  <div class="infos-estabelecimento">
+                     <p class="nome-estabelecimento">Dia Supermercado</p>
+                  </div>
+               </div>
+               <div class="estabelecimento-top-card">
+                  <div class="logo-estabelecimento" id="logo-big"></div>
+                  <div class="infos-estabelecimento">
+                     <p class="nome-estabelecimento">Big</p>
+                  </div>
+               </div>
+               <div class="estabelecimento-top-card">
+                  <div class="logo-estabelecimento" id="logo-eataly"></div>
+                  <div class="infos-estabelecimento">
+                     <p class="nome-estabelecimento">Eataly</p>
+                  </div>
+               </div>
+               <div class="estabelecimento-top-card">
+                  <div class="logo-estabelecimento" id="logo-extra"></div>
+                  <div class="infos-estabelecimento">
+                     <p class="nome-estabelecimento">Extra</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="banners" style="margin: 2rem;">
+            <div class="blob">
+                <div class="banner" id="banner-delivery"> </div>
+               </div>   
+            <div class="infos-comerciais">
+               <h1 class="infos-estabelecimento titulo-secao">Quer fazer entregas pelo iFood?</h1>
+               <p class="infos-estabelecimento subtitulo">Faça agora o seu cadastro e comece o quanto antes.</p>
+               <button class="btn infos-estabelecimento">Saiba mais</button>
+            </div>
+            <div class="blob">
+                <div class="banner" id="banner-store">  </div>
+               </div>
+           
+            <div class="infos-comerciais">
+               <h1 class="infos-estabelecimento titulo-secao">A sua fome de crescer ta no iFood</h1>
+               <p class="infos-estabelecimento subtitulo">Cadastre seu restaurante ou o seu mercado</p>
+               <button class="btn infos-estabelecimento">Saiba mais</button>
+            </div>
+         </div>
+         <div class="linha-separadora"> </div>
+         <div class="banners" id="fome-que">
+            <div class="infos-comerciais">
+                <h1 class="infos-estabelecimento titulo-secao">Você tem fome do quê?</h1>
+                <p class="infos-estabelecimento subtitulo">Descubra como é ser um FoodLover e faça parte da nossa revolução!</p>
+                <button class="btn infos-estabelecimento">Saiba mais</button>
+             </div>
+             <div class="banner" id="banner-fome"> </div>
+         </div>
+         <div class="banner" id="banner-beneficios"></div>
+         <div class="linha-separadora"> </div>
+         <div class="secao">
+             <p class="subtitulo">Desenvolvido por Luan de Lucca</a> </p>
+         </div>
+      </div>
+   </body>
+</html>
